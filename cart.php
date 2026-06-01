@@ -4,7 +4,7 @@
     echo "<div class='container'><h3>Cart</h3></div>";
     echo "<div class='cart-display'>";
     echo "<div class='cart-container'>";
-    $cn = mysqli_connect('localhost', 'root', '', 'smartbasket');
+    $cn = mysqli_connect('127.0.0.1', 'root', 'root', 'smartbasket', 3306);
     $qry ="select * from cart where username='".$user."'";
     $rs = mysqli_query($cn,$qry);
     $rc =mysqli_num_rows($rs);

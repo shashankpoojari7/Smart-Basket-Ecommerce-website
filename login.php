@@ -22,7 +22,7 @@ if (isset($_POST['loginbtn']))
     
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $cn = mysqli_connect('localhost', 'root', '', 'smartbasket');
+    $cn = mysqli_connect('127.0.0.1', 'root', 'root', 'smartbasket', 3306);
     $qry ="select * from logindb where username='".$username."' and password='".$password."'";
     $rc=mysqli_query($cn,$qry);
     $r=mysqli_num_rows($rc);

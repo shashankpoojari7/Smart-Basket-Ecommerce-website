@@ -24,7 +24,7 @@
                     <div class="total_products">
                     <p>Total Products:</p>
                     <?php
-                        $cn = mysqli_connect('localhost', 'root', '', 'smartbasket');
+                        $cn = mysqli_connect('127.0.0.1', 'root', 'root', 'smartbasket', 3306);
                         $qry = "SELECT * FROM products_list";
                         $rs = mysqli_query($cn,$qry);
                         $rc = mysqli_num_rows($rs);
@@ -38,7 +38,7 @@
                     <div class="total_products">
                     <p>Total Users:</p>
                     <?php
-                        $cn = mysqli_connect('localhost', 'root', '', 'smartbasket');
+                        $cn = mysqli_connect('127.0.0.1', 'root', 'root', 'smartbasket', 3306);
                         $qry = "SELECT * FROM logindb";
                         $rs = mysqli_query($cn,$qry);
                         $rc = mysqli_num_rows($rs);

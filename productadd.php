@@ -13,7 +13,7 @@
         $user =$_SESSION['user'];
         $url =$_SESSION['url'];
         $name =$_SESSION['name'];
-        $cn = mysqli_connect('localhost', 'root', '', 'smartbasket');
+        $cn = mysqli_connect('127.0.0.1', 'root', 'root', 'smartbasket', 3306);
         $qry ="select * from products_list where prod_id='$pid'";
         $rc = mysqli_query($cn,$qry);
         $row = mysqli_fetch_array($rc);

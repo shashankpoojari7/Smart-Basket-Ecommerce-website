@@ -7,7 +7,7 @@
         </div>
         <?php
         $_SESSION['url']="appliances.php";
-        $cn = new mysqli('localhost', 'root', '', 'smartbasket');
+        $cn = mysqli_connect('127.0.0.1', 'root', 'root', 'smartbasket', 3306);
         $qry ="select * from products_list where prod_cat='appliances'";
         $rc=mysqli_query($cn,$qry);
         echo "<div class='product_container'>";

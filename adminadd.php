@@ -71,7 +71,7 @@ if (isset($_POST['addbtn'])){
     $prod_cat = $_POST['prod_cat'];
     $prod_discount = $_POST['prod_discount'];
 
-    $cn = mysqli_connect('localhost', 'root', '', 'smartbasket');
+    $cn = mysqli_connect('127.0.0.1', 'root', 'root', 'smartbasket', 3306);
     $cqry = "SELECT * FROM products_list WHERE prod_id = " . $prod_id;
     $crs=mysqli_query($cn,$cqry);
     $crc=mysqli_num_rows($crs);

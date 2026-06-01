@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['dltbtn'])) {
     $prod_id = $_POST['prod_id'];
-    $cn = mysqli_connect('localhost', 'root', '', 'smartbasket');
+    $cn = mysqli_connect('127.0.0.1', 'root', 'root', 'smartbasket', 3306);
     $qry = "SELECT * FROM `products_list` WHERE prod_id='$prod_id'";
     $rc = mysqli_query($cn, $qry);
     $r = mysqli_num_rows($rc);

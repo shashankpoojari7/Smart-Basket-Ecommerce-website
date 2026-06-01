@@ -26,7 +26,7 @@
     <?php
         $net = $_SESSION['net'];
         $dis = $_SESSION['dis'];
-        $cn = mysqli_connect('localhost', 'root', '', 'smartbasket');
+        $cn = mysqli_connect('127.0.0.1', 'root', 'root', 'smartbasket', 3306);
         $qry ="select * from cart where username='".$_SESSION['user']."'";
         $rs = mysqli_query($cn,$qry);
         $rc = mysqli_num_rows($rs);
@@ -49,7 +49,7 @@
 <?php
     if(isset($_POST['btn'])){
         $id = $_SESSION['user'];
-        $cn = mysqli_connect('localhost', 'root', '', 'smartbasket');
+        $cn = mysqli_connect('127.0.0.1', 'root', 'root', 'smartbasket', 3306);
         $dltqry = "UPDATE products_list SET prod_qty = prod_qty - 1 WHERE prod_id IN 
         (SELECT prod_id FROM cart WHERE username = '".$id."')";
         mysqli_query($cn,$dltqry);

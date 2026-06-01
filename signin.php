@@ -31,7 +31,7 @@ $name = $fname." ".$lname;
 $_SESSION['user']=$username;
 $_SESSION['name']=$name;
 
-$cn = mysqli_connect('localhost', 'root', '', 'smartbasket');
+$cn = mysqli_connect('127.0.0.1', 'root', 'root', 'smartbasket', 3306);
 $qry="select * from logindb where username='".$username."'";
 $rc=mysqli_query($cn,$qry);
 $r=mysqli_num_rows($rc);

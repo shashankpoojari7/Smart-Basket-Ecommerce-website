@@ -2,7 +2,7 @@
     include 'partials/header.php';
     if(isset($_POST['btn'])) {
         $product_id = $_POST['product_id'];
-        $cn = new mysqli('localhost', 'root', '', 'smartbasket');
+        $cn = mysqli_connect('127.0.0.1', 'root', 'root', 'smartbasket', 3306);
         $qry ="select * from products_list where prod_id=".$product_id;
         $rc=mysqli_query($cn,$qry);
         $row=mysqli_fetch_assoc($rc);
